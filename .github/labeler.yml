@@ -35,6 +35,8 @@ DOCS:
   - "**/*CHANGELOG.md"
   - "**/*README.md"
   - "**/*CONTRIBUTING.md"
+SPECIFICATION:
+  - "format/*"
 EXAMPLES:
   - examples/**/*
 COMMON:
@@ -43,8 +45,6 @@ API:
   - api/**/*
 CORE:
   - core/**/*
-PYTHON:
-  - python/**/*
 PARQUET:
   - parquet/**/*
 ARROW:

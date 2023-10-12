@@ -28,7 +28,6 @@ on:
   pull_request:
     paths-ignore:
     - '.github/ISSUE_TEMPLATE/iceberg_bug_report.yml'
-    - '.github/workflows/python-ci.yml'
     - '.github/workflows/flink-ci.yml'
     - '.github/workflows/hive-ci.yml'
     - '.gitignore'
@@ -40,7 +39,6 @@ on:
     - 'hive-runtime/**'
     - 'flink/**'
     - 'pig/**'
-    - 'python/**'
     - 'docs/**'
     - 'open-api/**'
     - 'format/**'
@@ -60,7 +58,7 @@ jobs:
     strategy:
       matrix:
         jvm: [8, 11]
-        spark: ['3.1', '3.2', '3.3', '3.4']
+        spark: ['3.2', '3.3', '3.4', '3.5']
     env:
       SPARK_LOCAL_IP: localhost
     steps:
@@ -90,7 +88,7 @@ jobs:
     strategy:
       matrix:
         jvm: [8, 11]
-        spark: ['3.2','3.3','3.4']
+        spark: ['3.2','3.3','3.4','3.5']
     env:
       SPARK_LOCAL_IP: localhost
     steps:
@@ -119,7 +117,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        spark: ['3.3','3.4']
+        spark: ['3.3','3.4', '3.5']
         scala-version: ['2.12', '2.13']
     env:
       SPARK_LOCAL_IP: localhost
